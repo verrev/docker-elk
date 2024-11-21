@@ -34,7 +34,7 @@ filebeat.autodiscover:
 processors:
   - add_cloud_metadata: ~
   - decode_json_fields:
-      fields: ["message"]
+      fields: ["timestamp", "level", "message", "meta"]
       process_array: false
       max_depth: 2
       target: ""
